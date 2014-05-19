@@ -1,7 +1,9 @@
 AnDevCon14Boston
 ================
 
-Michael Crump
+Michael Crump 
+
+http://twitter.com/mbcrump
 
 http://michaelcrump.net
 

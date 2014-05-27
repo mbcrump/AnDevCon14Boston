@@ -1,5 +1,7 @@
 package net.michaelcrump.myfirstapp;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,12 +25,13 @@ public void onClickMe(View view)
     TextView tvLabel = (TextView)findViewById(R.id.textView);
 
     String userName = mEdit.getText().toString();
-
     Toast toast = Toast.makeText(this, "Your name is: " + userName, Toast.LENGTH_LONG);
     toast.show();
 
+
     tvLabel.setText("Your name is " + userName );
 }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,6 +49,17 @@ public void onClickMe(View view)
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
+        }
+
+        if (id == R.id.action_other) {
+          //  Toast toast = Toast.makeText(this, "Settings Clicked", Toast.LENGTH_LONG);
+          //  toast.show();
+            Intent intent = new Intent(this, MainActivity2.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.action_exit) {
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }
